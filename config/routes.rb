@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :articles
   get 'sessions/new'
 
   root 'pages#index'

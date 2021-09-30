@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @topics.each do |topic| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2 class="topic-author">
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Video</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                <% @articles.each do |article| %>
+                  <tr>
+                    <td><%= article.title %></td>
+                    <td><%= article.video %></td>
+                    <td><%= link_to 'Show', article %></td>
+                    <td><%= link_to 'Destroy', article, method: :delete %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            
+            <br>
+            
+            <%= link_to 'New Article', new_article_path %>
+             </p>
+                <% end %>
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

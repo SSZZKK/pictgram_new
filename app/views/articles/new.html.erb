@@ -1,0 +1,17 @@
+<h1>動画の投稿</h1>
+
+<%= render 'form', article: @article %>
+
+<%= link_to 'Back', articles_path %>
+
+<%= form_with model: @top, local: true do |f| %>
+
+<div class="field">
+  <%= f.label :video %>
+  <%= f.file_field :video_top, :accept => 'video/*' %>
+</div>
+
+<div class="#">
+  <%= f.submit "投稿" ,class:"#" %>
+</div>
+<% end %>
