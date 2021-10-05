@@ -8,6 +8,7 @@ class User < ApplicationRecord
   validates :password, presence: true, format: { with: PW_REGEX }
 
   has_many :topics
+  has_many :articles
   has_many :favorites
   has_many :favorite_topics, through: :favorites, source: 'topic'
   
