@@ -2,7 +2,8 @@
 
 <div class="topic-index-wrapper">
   <div class="container">
-
+    <% @articles.each do |article| %>
+    
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
@@ -12,18 +13,22 @@
               <thead>
                 <tr>
                   <th>Titles</th>
-                  <th>Movie</th>
                   <th colspan="2"></th>
                 </tr>
               </thead>
             
               <tbody>
-                <% @articles.each do |article| %>
+                
                   <tr>
+                    
+                    <TABLE style="font-size: 15pt; line-height: 300%;">
                     <td><%= article.title %></td>
-                    <td><%= article.title %></td>
-                    <td><%= link_to 'Show', article %></td>
-                    <td><%= link_to 'Destroy', article, method: :delete %></td>
+                    
+                    <TABLE style="font-size: 15pt; line-height: 200%;">
+                    <td><%= link_to '再生する', article %></td>
+                    
+                    <TABLE BORDER="1" style="font-size: 7pt; line-height: 200%;">
+                    <td><%= link_to '削除', article, method: :delete %></td>
                   </tr>
                 <% end %>
               </tbody>

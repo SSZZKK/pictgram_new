@@ -1,18 +1,20 @@
+<div class="topic-new-wrapper" >
+  <div class="container">
+    <div class="row">
+      
+      <td><%= @article.title %></td>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Video:</strong>
-  <%= @article.video %>
-</p>
-
-<%= link_to 'Back', articles_path %>
-
-<div class="video-player">
-    <%= video_tag @article.video.url, autoplay: false, muted: false, controls: true , :size => "854x480"%>
-</div>
+            <h2 style="text-align:left">
+              <div class="video-player">
+                <%= video_tag @article.video.url, autoplay: false, muted: false, controls: true , :size => "854x480"%>
+              </div>
+            </h2>
+            
+            
+             <%= link_to '削除する', @article, method: :delete %>
+             <%= link_to 'Back', articles_path %>
+            
+      
+    </div>
+  </div>
+</div>      

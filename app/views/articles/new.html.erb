@@ -11,16 +11,11 @@
               <%= f.file_field :video, :accept => 'video/*' %>
             </div>
             
-<%
-=begin
-%>            <div class="form-group">
-              <%= f.label :description %>
-              <%= f.text_area :description, class: 'form-control' %>
+         <div class="form-group">
+              <%= f.label :title %>
+              <%= f.text_area :title, class: 'form-control' %>
             </div>
-<%
-=end
-%>            
-            
+       
             <% if logged_in? %>
             　<%= f.submit '投稿', class: 'btn btn-black btn-block' %>
             <% end %>

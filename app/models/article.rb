@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   validates :user_id, presence: true
-  validates :description, presence: true
+  # validates :description, presence: true
   validates :title, :video, :presence => true
 
   belongs_to :user
