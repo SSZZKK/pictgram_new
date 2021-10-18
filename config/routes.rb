@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :articles
   get 'sessions/new'
 
   root 'pages#index'
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
   resources :users
   resources :topics
   resources :comments
+  resources :articles
 
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'

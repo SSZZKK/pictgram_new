@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">画像の投稿</h1>
+        
         <%= form_for @topic do |f| %>
+        
           <div class="form-group">
             <%= f.label :image %>
             <%= f.file_field :image%>
