@@ -13,6 +13,16 @@
             
              <%= link_to '削除する', @article, method: :delete %>
              <%= link_to 'Back', articles_path %>
+             
+             <% if @article.errors.any? %>
+              <div class = "alert">
+                <ul>
+                  <% user.errors.full_messages.each do |message| %>
+                    <li><%= 失敗しました %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
             
       
     </div>

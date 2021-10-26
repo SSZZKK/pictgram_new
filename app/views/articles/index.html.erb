@@ -1,46 +1,22 @@
-<p id="notice"><%= notice %></p>
-
 <div class="topic-index-wrapper">
   <div class="container">
+    
     <% @articles.each do |article| %>
     
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
             <h2 class="topic-author">
-
-            <table>
-              <thead>
-                <tr>
-                  <th>Titles</th>
-                  <th colspan="2"></th>
-                </tr>
-              </thead>
-            
-              <tbody>
+              <%= article.user.name %>
+              </h2>
+              
+              <%= video_tag article.video.url, autoplay: false, muted: false, controls: true , :size => "427x240"%>
                 
-                  <tr>
-                    
-                    <TABLE style="font-size: 15pt; line-height: 300%;">
-                    <td><%= article.title %></td>
-                    
-                    <TABLE style="font-size: 15pt; line-height: 200%;">
-                    <td><%= link_to '再生する', article %></td>
-                    
-                    <TABLE BORDER="1" style="font-size: 7pt; line-height: 200%;">
-                    <td><%= link_to '削除', article, method: :delete %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
-            
-            <br>
-            
-            <%= link_to 'New Article', new_article_path %>
-            
-                
-            
-            
+                  
+                   <%= article.title %>
+                  <td><%= link_to '再生', article %></td>
+                  <br><%= link_to '削除', article, method: :delete %>
+              <% end %>
           </div>
         </div>
       </div>
