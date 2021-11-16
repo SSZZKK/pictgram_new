@@ -1,14 +1,12 @@
 <div class="topic-index-wrapper">
   <div class="container">
-    
     <% @articles.each do |article| %>
-    
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
             <h2 class="topic-author">
               <%= article.user.name %>
-              </h2>
+            </h2>
               
               <%= video_tag article.video.url, autoplay: false, muted: false, controls: true , :size => "427x240"%>
                 
@@ -16,10 +14,10 @@
                    <%= article.title %>
                   <td><%= link_to '再生', article %></td>
                   <br><%= link_to '削除', article, method: :delete %>
-              <% end %>
+                  <% end %>
+              
           </div>
-        </div>
+         </div>
       </div>
-      
-  </div>
+    </div>
 </div>

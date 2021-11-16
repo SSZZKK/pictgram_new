@@ -4,7 +4,7 @@
       
       <td><%= @article.title %></td>
 
-            <h2 style="text-align:left">
+            <h2 style="topic-author">
               <div class="video-player">
                 <%= video_tag @article.video.url, autoplay: false, muted: false, controls: true , :size => "854x480"%>
               </div>
@@ -17,6 +17,7 @@
              <% if @article.errors.any? %>
               <div class = "alert">
                 <ul>
+                  
                   <% user.errors.full_messages.each do |message| %>
                     <li><%= 失敗しました %></li>
                   <% end %>

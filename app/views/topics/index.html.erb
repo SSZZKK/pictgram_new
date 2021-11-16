@@ -8,14 +8,13 @@
               <%= topic.user.name %>
             </h2>
             
-             <%=topic.image.filename %>
-             <% if %r[\.ping|.jpg|.jpeg] =~ topic.image.filename %>
+             
+             <% if %r[\.png|\.jpg|\.jpeg] =~ topic.image.filename %>
              <%= image_tag topic.image.url %>
-  イメージタグ
              
              <% elsif %r[\.mp4|\.wmv|\.MOV] =~ topic.image.filename %>
-             <%= video_tag topic.image.url, autoplay: false, muted: false, controls: true , :size => "427x240"%>
-             ビデオタグ
+             <%= video_tag topic.image.url, autoplay: false, muted: false, controls: true , :size => "427x240" %>
+             
              <% end %>
             
             
